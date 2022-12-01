@@ -9,7 +9,6 @@ with open("day1.txt") as file:
       supplies.append(int(line))
     else:  
       supplies.append(line)
-print(supplies)
 
 highestAmount = 0
 currentTotal = 0
