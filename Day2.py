@@ -45,3 +45,58 @@ for game in guide:
   print(f"Total score {totalScore}")
 
 print(f"Total score {totalScore}")
+
+### Part 2 ###
+totalScore = 0
+with open("day2.txt") as file:
+  guide = [line.split() for line in file]
+  
+for game in guide:
+  print(game)
+  #Work out what the outcome needs to be
+  if game[1] == "X":
+    #I need to lose
+    outcomeScore = 0
+    #Now work out what the shape needs to be
+    if game[0] == "A":
+      #I need to play scissors
+      shapeScore = 3
+    elif game[0] == "B":
+      #I need to play rock
+      shapeScore = 1
+    else:
+      shapeScore = 2
+  elif game[1] == "Y":
+    #I need to draw
+    outcomeScore = 3
+     #Now work out what the shape needs to be
+    if game[0] == "A":
+      #I need to play rock
+      shapeScore = 1
+    elif game[0] == "B":
+      #I need to play paper
+      shapeScore = 2
+    else:
+      shapeScore = 3
+  else:
+    #I need to win
+    outcomeScore = 6
+     #Now work out what the shape needs to be
+    if game[0] == "A":
+      #I need to play paper
+      shapeScore = 2
+    elif game[0] == "B":
+      #I need to play scissors
+      shapeScore = 3
+    else:
+      shapeScore = 1
+    
+
+  roundScore = shapeScore + outcomeScore
+  print(f"Shape Score {shapeScore}")
+  print(f"Outcome Score {outcomeScore}")
+  print(f"Round Score {roundScore}")
+  totalScore = totalScore + roundScore
+  print(f"Total score {totalScore}")
+
+print(f"Total score at the end is: {totalScore}")
