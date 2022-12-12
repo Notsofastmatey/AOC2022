@@ -41,9 +41,6 @@ if debug:
 else:
   fileName = 'day10.txt'
 
- 
-
-
 commands = getData(fileName)
 computer = Computer(commands)
 computer.run()
