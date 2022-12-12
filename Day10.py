@@ -7,7 +7,7 @@ class Computer:
 
   def run(self):
     for line in self.commands:
-      if line.startswith('noop'):
+      if line[:4]=='noop':
         self.noop()
       else:
         v=int(line.split(' ')[1])
