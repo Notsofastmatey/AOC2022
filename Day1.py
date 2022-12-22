@@ -28,3 +28,5 @@ for food in supplies:
 elfTotals = sorted(elfTotals)
 print(f"The 3 highest totals are: {elfTotals[-3:]}")
 print(f"Total for top 3: {sum(elfTotals[-3:])}")
+
+  
